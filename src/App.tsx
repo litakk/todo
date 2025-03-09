@@ -14,7 +14,7 @@ function App() {
           <SearchForm />
         </ResizablePanel>
         <ResizableHandle withHandle />
-        <ResizablePanel>Форма для добавления</ResizablePanel>
+        <ResizablePanel>Форма для добавления.</ResizablePanel>
       </ResizablePanelGroup>
     </div>
   );
