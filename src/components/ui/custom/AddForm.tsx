@@ -17,11 +17,11 @@ const AddForm: React.FC<AddUserProps> = ({setUsers}) => {
     const phone = fm.get("phone") as string;
 
     if (! name || !surname ||  isNaN(age) || !(phone)) {
-        alert("Заполните все поля корректно!");
+        alert("Заполните данные!");
         return;
     }
 
-    const newUser: Todo = {
+    const newUser: User = {
         id: Math.random(),
         name,
         surname,
