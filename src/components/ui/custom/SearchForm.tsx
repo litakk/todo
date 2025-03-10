@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
+import { User } from "@/types";
 
-interface SearchInputProps {}
+interface SearchInputProps {
+  users: Array<User>;
+  setFiltered: (array: any) => void;
+}
 
-const SearchInput: React.FC<SearchInputProps> = () => {
+const SearchInput: React.FC<SearchInputProps> = ({ users, setFiltered }) => {
   const [search, setSearch] = useState<string>("");
 
   useEffect(() => {
@@ -12,11 +16,12 @@ const SearchInput: React.FC<SearchInputProps> = () => {
 
     setFiltered(filtered);
     
-  }, [search]);
+  }, [search, users]);
 
   return (
-    <form>
+    <form className="shadow">
       <input
+        className="w-full"
         type="text"
         placeholder="search"
         name="search"
